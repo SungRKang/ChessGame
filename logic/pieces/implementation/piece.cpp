@@ -55,16 +55,4 @@ bool piece::movePiece(position desiredPosition) {
         return false;
     }
 }
-// a function that identifies the possible positions that a piece can move to and updates the possiblePositions vector
-// does not check for gamestate, simply a list of where the piece COULD go
-void piece::identifyPossiblePositions() { //make this a pure virtual and make specific pieces a child of the piece class
-    //Starting to get into the rules of the game
-    //pawn
-    position tempPos = currentPosition;
-    //king
-    //queen
-    //bishop
-    //knight
-    //rook
-}
 
