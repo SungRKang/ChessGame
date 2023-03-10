@@ -5,12 +5,12 @@
 
 //implementation file for the piece class
 
-piece::piece(std::string theType) {
+piece::piece() {}
+piece::piece(pieceType theType) {
     type = theType;
-    identifyPossiblePositions();
 }
 
-std::string piece::getType(){
+pieceType piece::getType(){
     return type;
 }
 position piece::getCurrentPosition() {
@@ -29,7 +29,7 @@ bool piece::getFirstMove(){
 void piece::setFirstMove(bool flag){
     firstMove = flag;
 }
-void piece::setType(std::string theType){
+void piece::setType(pieceType theType){
     type = theType;
 }
 void piece::setcurrentPosition(position theCurrentPosition){

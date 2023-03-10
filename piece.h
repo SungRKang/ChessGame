@@ -11,22 +11,29 @@
 #include <string>
 #include <vector>
 #include "position.h"
+enum pieceColor {white , black};
+enum pieceType {pawn,king,queen,bishop,knight,rook,empty};
 class piece {
     private:
-        std::string type;
+        pieceType type;
+        pieceColor color;
         position currentPosition;
         position defaultPosition;
         std::vector<position> possiblePositions;
+
         bool firstMove;
     public:
-        piece(std::string theType);
-        std::string getType();
+        piece();
+        piece(pieceType theType);
+        pieceType getType();
         position getCurrentPosition();
         position getDefaultPosition();
         std::vector<position> getpossiblePositions();
         bool getFirstMove();
+        pieceColor getColor();
+        void setColor(pieceColor theColor);
         void setFirstMove(bool flag);
-        void setType(std::string theType);
+        void setType(pieceType theType);
         void setcurrentPosition(position theCurrentPosition);
         void setdefaultPosition(position theDefaultPosition);
         //this setter does similar things to identifyPossiblePositions() given below, but is a way to force the possible positions without checking for game rule compatbility
