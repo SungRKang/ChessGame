@@ -45,6 +45,7 @@ class piece {
         // a function that identifies the possible positions that a piece can move to and updates the possiblePositions vector
         // returns TRUE if there was a change and FALSE if there were none
         virtual void identifyPossiblePositions() = 0; //pure virtual
+        //DOES NOT check if the move would be legal in a given game state, but rather is a list of the possible moves.
 
 
 };

@@ -61,21 +61,6 @@ void piece::identifyPossiblePositions() { //make this a pure virtual and make sp
     //Starting to get into the rules of the game
     //pawn
     position tempPos = currentPosition;
-    if (type == "pawn") {
-        // a pawn moves forwards
-        tempPos.setRow(tempPos.getRow()+1);
-        possiblePositions.push_back(tempPos);
-        // but captures diagonally
-        tempPos = currentPosition;
-        tempPos.setRow(tempPos.getRow()+1);
-        tempPos.setCol(static_cast<char>(tempPos.getCol()+1));
-        possiblePositions.push_back(tempPos);
-        // first move: a pawn has the option to move 2 spaces on its first move
-        tempPos=currentPosition;
-        tempPos.setRow(tempPos.getRow()+2);
-        possiblePositions.push_back(tempPos);
-        // 
-    }
     //king
     //queen
     //bishop
