@@ -5,12 +5,12 @@
 
 //implementation file for the piece class
 
-piece::piece(std::string theType) {
+piece::piece() {}
+piece::piece(pieceType theType) {
     type = theType;
-    identifyPossiblePositions();
 }
 
-std::string piece::getType(){
+pieceType piece::getType(){
     return type;
 }
 position piece::getCurrentPosition() {
@@ -29,7 +29,7 @@ bool piece::getFirstMove(){
 void piece::setFirstMove(bool flag){
     firstMove = flag;
 }
-void piece::setType(std::string theType){
+void piece::setType(pieceType theType){
     type = theType;
 }
 void piece::setcurrentPosition(position theCurrentPosition){
@@ -54,32 +54,5 @@ bool piece::movePiece(position desiredPosition) {
     } else {
         return false;
     }
-}
-// a function that identifies the possible positions that a piece can move to and updates the possiblePositions vector
-// does not check for gamestate, simply a list of where the piece COULD go
-void piece::identifyPossiblePositions() { //make this a pure virtual and make specific pieces a child of the piece class
-    //Starting to get into the rules of the game
-    //pawn
-    position tempPos = currentPosition;
-    if (type == "pawn") {
-        // a pawn moves forwards
-        tempPos.setRow(tempPos.getRow()+1);
-        possiblePositions.push_back(tempPos);
-        // but captures diagonally
-        tempPos = currentPosition;
-        tempPos.setRow(tempPos.getRow()+1);
-        tempPos.setCol(static_cast<char>(tempPos.getCol()+1));
-        possiblePositions.push_back(tempPos);
-        // first move: a pawn has the option to move 2 spaces on its first move
-        tempPos=currentPosition;
-        tempPos.setRow(tempPos.getRow()+2);
-        possiblePositions.push_back(tempPos);
-        // 
-    }
-    //king
-    //queen
-    //bishop
-    //knight
-    //rook
 }
 
