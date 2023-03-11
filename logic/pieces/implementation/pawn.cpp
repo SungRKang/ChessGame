@@ -1,6 +1,6 @@
 //implementation for pawn
 #include <vector>
-#include "logic/pieces/headers/pawn.h"
+#include "../headers/pawn.h"
 pawn::pawn(){}
 pawn::pawn(position defaultPosition, pieces::pieceColor theColor){ //contructor for pawn
     setColor(theColor);

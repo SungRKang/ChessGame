@@ -2,7 +2,7 @@
 #ifndef PAWN_H
 #define PAWN_H
 
-#include "position.h"
+#include "position/position.h"
 #include "piece.h"
 class pawn: public piece {
     

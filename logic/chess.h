@@ -1,7 +1,11 @@
 //class that will manage the overall logic of the game
-#include "position.h"
+#ifndef CHESS_H
+#define CHESS_H
+
+#include "pieces/headers/position/position.h"
 #include "pieces/headers/piece.h"
 #include "pieces/headers/board.h"
+
 
 
 class chess {
@@ -15,3 +19,5 @@ class chess {
         void initializeGame();
         
 };
+
+#endif

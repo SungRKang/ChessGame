@@ -10,7 +10,7 @@
 
 #include <string>
 #include <vector>
-#include "position.h"
+#include "position/position.h"
 namespace pieces {
     enum pieceColor {white , black};
     enum pieceType {pawn,king,queen,bishop,knight,rook,empty};
