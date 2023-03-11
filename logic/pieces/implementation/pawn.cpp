@@ -2,7 +2,7 @@
 #include <vector>
 #include "logic/pieces/headers/pawn.h"
 pawn::pawn(){}
-pawn::pawn(position defaultPosition, pieceColor theColor){ //contructor for pawn
+pawn::pawn(position defaultPosition, pieces::pieceColor theColor){ //contructor for pawn
     setColor(theColor);
     setdefaultPosition(defaultPosition);
     setcurrentPosition(defaultPosition);

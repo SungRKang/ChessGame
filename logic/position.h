@@ -5,6 +5,7 @@
     //Column
 
 //Although manipulation of the matrix will need row and column to be in the form of integer, storing it will be in the form of alpha column and num row
+#include <vector>
 
 #ifndef POSITION_H
 #define POSITION_H
@@ -22,6 +23,7 @@ class position {
         char getCol();
         void setRow(int input);
         void setCol(char input);
+        std::vector<int> convert(); //returns the position value in an array that can be read into matrix position
 };
 
 #endif

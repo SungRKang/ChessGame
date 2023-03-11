@@ -13,7 +13,7 @@ class board {
     public:
         std::vector<std::vector<piece>> getBoard();
         void setBoard(std::vector<std::vector<piece>> aBoard);
-        
+        void addPiece(piece aPiece, position aPosition);
 };
 
 #endif

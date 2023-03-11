@@ -8,7 +8,7 @@ class pawn: public piece {
     
     public:
         pawn(); //default constructor
-        pawn(position defaultPosition, pieceColor color); //contructor for pawn
+        pawn(position defaultPosition, pieces::pieceColor color); //contructor for pawn
         void identifyPossiblePositions();
 };
 
