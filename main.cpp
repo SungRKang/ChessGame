@@ -8,5 +8,7 @@ int main () {
     view aView;
     aView.setChessGame(aGame);
     aView.render();
+    
     return 0;
+
 }
