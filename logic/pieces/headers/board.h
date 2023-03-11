@@ -4,7 +4,7 @@
 #ifndef BOARD_H
 #define BOARD_H
 #include "piece.h"
-#include "position.h"
+#include "position/position.h"
 #include <vector>
 
 class board {
@@ -13,7 +13,7 @@ class board {
     public:
         std::vector<std::vector<piece>> getBoard();
         void setBoard(std::vector<std::vector<piece>> aBoard);
-        
+        void addPiece(piece aPiece, position aPosition);
 };
 
 #endif

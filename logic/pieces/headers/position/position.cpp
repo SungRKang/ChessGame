@@ -3,8 +3,8 @@
 
 //default constructor
 position::position() {
-    row =0;
     column = 'A';
+    row =0;
 }
 //constructor
 position::position(char alphaCol, int numRow) {
@@ -30,4 +30,10 @@ void position::setRow(int input) {
 
 void position::setCol(char input) {
     column = input;
+}
+
+std::vector<int> position::convert() {
+    std::vector<int> temp;
+    temp.push_back(int(column) - 65); //convert the letter into ascii, offset so that A is 0
+    temp.push_back(row-1); //Although the convention gives positions starting at 1, matrix will offset so that it starts at 0
 }

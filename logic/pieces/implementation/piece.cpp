@@ -1,4 +1,4 @@
-#include "piece.h"
+#include "../headers/piece.h"
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -6,11 +6,11 @@
 //implementation file for the piece class
 
 piece::piece() {}
-piece::piece(pieceType theType) {
+piece::piece(pieces::pieceType theType) {
     type = theType;
 }
 
-pieceType piece::getType(){
+pieces::pieceType piece::getType(){
     return type;
 }
 position piece::getCurrentPosition() {
@@ -29,7 +29,7 @@ bool piece::getFirstMove(){
 void piece::setFirstMove(bool flag){
     firstMove = flag;
 }
-void piece::setType(pieceType theType){
+void piece::setType(pieces::pieceType theType){
     type = theType;
 }
 void piece::setcurrentPosition(position theCurrentPosition){
